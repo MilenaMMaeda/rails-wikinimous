@@ -1,0 +1,19 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+<%# Add new article %>
+<%= link_to new_article_path do %>
+  <i class="fa-solid fa-plus"></i>
+<% end %>
+<%# Edit article %>
+<%= link_to edit_article_path do %>
+  <i class="fa-solid fa-pen-to-square"></i>
+<% end %>
+<%# Back to homepage %>
+<%= link_to articles_path do %>
+  <i class="fa-solid fa-house"></i>
+<% end %>
+<%# Destroy %>
+<%= link_to article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <i class="fa-regular fa-trash-can"></i>
+<% end %>
+
